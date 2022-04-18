@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 
 @Configuration
 public class MyRouter {
-
+//    @Bean
 //    public RouterFunction<ServerResponse> route2(MyHandler myHandler) {
 //        return RouterFunctions.route()
 //                .path("/test1", builder ->
@@ -20,15 +20,7 @@ public class MyRouter {
 //                .build();
 //    }
 //
-//    @Bean
-//    public RouterFunction<ServerResponse> route() {
-//        return RouterFunctions.route(
-//                RequestPredicates.GET("/hello"),
-//                req -> ServerResponse
-//                        .ok().body(Flux.just("Hello", "World!"), String.class)
-//        );
-//    }
-
+    
     @Bean
     public RouterFunction<ServerResponse> route(MyHandler handler) {
         return RouterFunctions.route(
